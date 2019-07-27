@@ -11,7 +11,7 @@ def Home():
 
 
 @server.route("/<image>.jpg")
-def Image():
+def Image(image=""):
     path = "../" + image + ".jpg"
     return send_file(path, mimetype="image/jpg")
 
