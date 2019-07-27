@@ -72,8 +72,8 @@ def Download():
         for file in filePaths:
             zip_file.write(file)
     
-    zipfile = dir_name + ".zip"
-    return send_file(zipfile, mimetype="application/zip")
+    zippath = dir_name + ".zip"
+    return send_file(zippath, mimetype="application/zip")
 
 if __name__=="__main__":
     server.run(debug=DebugMode,host=HOST,port=PORT)
