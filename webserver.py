@@ -27,13 +27,13 @@ def make_tree(path):
 @server.route("/")
 def dirtree():
     path = os.path.expanduser(u'~')
-    path = path + "/camera/images/"
+    path = path + "/camera/images"
     return render_template('dirtree.html', tree=make_tree(path))
 
 
-@server.route("/randomhere")
+@server.route("/<image>.jpg")
 def Images():
-    path = "../" + image + ".jpg"
+    path = "/images/" + image + ".jpg"
     return send_file(path, mimetype="image/jpg")
 
 if __name__=="__main__":
