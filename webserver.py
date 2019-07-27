@@ -32,9 +32,9 @@ def dirtree():
 
 
 @server.route("/<image>.jpg")
-def Images(image):
-    path = "/images/" + image + ".jpg"
-    return send_file(path, mimetype="image/jpg")
+def Images(image=""):
+    imagepath = "images/" + image + ".jpg"
+    return send_file(imagepath, mimetype="image/jpg")
 
 if __name__=="__main__":
     server.run(debug=DebugMode,host=HOST,port=PORT)
