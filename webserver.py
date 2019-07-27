@@ -14,3 +14,6 @@ def Home():
 def Image():
     path = "../" + image + ".jpg"
     return send_file(path, mimetype="image/jpg")
+
+
+server.run(debug=DebugMode,host=HOST,port=PORT)
