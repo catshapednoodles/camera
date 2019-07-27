@@ -3,9 +3,6 @@
 <h1>{{ tree.name }}</h1>
 <ul>
 {%- for item in tree.children recursive %}
-    <li>{{ item.name }}
-    {%- if item.children -%}
-        <ul><a href="/{{ loop(item.children) }}">{{ loop(item.children) }}</a></ul>
-    {%- endif %}</li>
+    <li><a href="{{ item.name }}">{{ item.name}}</a></li>
 {%- endfor %}
 </ul>
