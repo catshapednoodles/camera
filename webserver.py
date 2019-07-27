@@ -27,6 +27,7 @@ def make_tree(path):
 @server.route("/")
 def dirtree():
     path = os.path.expanduser(u'~')
+    path = path + "/camera"
     return render_template('dirtree.html', tree=make_tree(path))
 
 
