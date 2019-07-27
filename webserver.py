@@ -32,7 +32,7 @@ def dirtree():
 
 
 @server.route("/<image>.jpg")
-def Images():
+def Images(image):
     path = "/images/" + image + ".jpg"
     return send_file(path, mimetype="image/jpg")
 
