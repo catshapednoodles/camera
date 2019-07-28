@@ -5,7 +5,7 @@ html {
 }
 
 h1 {
-	text-transform: uppercase;
+	text-transform: capitalize;
 }
 
 /* Add a background color and some padding around the form */
