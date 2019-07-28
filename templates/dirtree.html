@@ -34,13 +34,14 @@
 	<body>
 		<div class="container">
 			<h1>{{ tree.name }}</h1>
+			<p><a href="/download"><button type="button">Download all</button></a></p>
+			
 			<ul>
 			{%- for item in tree.children recursive %}
 				<li><a href="{{ item.name }}">{{ item.name}}</a></li>
 			{%- endfor %}
 			</ul>
 
-			<p><a href="/download"><button type="button">Download all</button></a></p>
 		</div>
 		
 	</body>
