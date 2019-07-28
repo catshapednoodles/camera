@@ -34,7 +34,7 @@
 	<body>
 		<div class="container">
 			<h1>{{ tree.name }}</h1>
-			<p><a href="/download"><button type="button">Download all</button></a></p>
+			<p><a href="/download"><button type="button">Download all</button></a><a href="/downloadzip"><button type="button">Download pre-zip</button></a></p>
 			
 			<ul>
 			{%- for item in tree.children recursive %}

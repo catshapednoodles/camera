@@ -74,6 +74,11 @@ def Download():
     
     zippath = dir_name + ".zip"
     return send_file(zippath, mimetype="application/zip", as_attachment=True, cache_timeout=1)
+    
+@server.route("/downloadzip")
+def Downloadzip():
+    zippath = "images.zip"
+    return send_file(zippath, mimetype="application/zip", as_attachment=True, cache_timeout=1)
 
 if __name__=="__main__":
     server.run(debug=DebugMode,host=HOST,port=PORT)
