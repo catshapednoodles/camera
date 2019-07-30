@@ -81,4 +81,4 @@ def Downloadzip():
     return send_file(zippath, mimetype="application/zip", as_attachment=True, cache_timeout=1)
 
 if __name__=="__main__":
-    server.run(debug=DebugMode,host=HOST,port=PORT)
+    server.run(debug=DebugMode, threaded=True, host=HOST,port=PORT)
